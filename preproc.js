@@ -27,6 +27,11 @@ var resolvePlantuml = (markdown) =>
 		return '```plantuml\n@startuml\n' + text + '@enduml\n```'
 	})
 	
+	markdown = markdown.replace(/```mermaid\s*classDiagram\s*([\s\S]*?)```/igm, function(match, text, offset){
+		console.log('>>in step1:' + text)
+		return '```plantuml\n@startuml\n' + text + '@enduml\n```'
+	})
+	
 	//console.log('>>type of markdown:' + typeof markdown)
 	//console.log('step1:' + markdown)
 	
