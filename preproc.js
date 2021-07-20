@@ -8,7 +8,7 @@ var resolvePlantuml = (markdown) =>
 	})
 	
 	markdown = markdown.replace(/```mermaid\s*classDiagram\s*([\s\S]*?)```/igm, function(match, text, offset){
-		console.log('>>in step1:' + text)
+		//console.log('>>in step1:' + text)
 		return '```plantuml\n@startuml\n' + text + '@enduml\n```'
 	})
 	
