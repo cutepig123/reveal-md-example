@@ -5,6 +5,12 @@
 Bob -> Alice : hello
 @enduml
 ```
+
 ---
 
 ## Second page
+
+```sequence
+Bob -> Alice : hello
+```
+
