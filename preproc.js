@@ -20,18 +20,18 @@ var createPNG = (plantumlScript, fileNameAbsolute) => {
 
 var resolvePlantuml = (markdown) => 
 {
-	console.log('>>type of markdown:' + typeof markdown)
+	//console.log('>>type of markdown:' + typeof markdown)
 		
 	markdown = markdown.replace(/```sequence\s*([\s\S]*?)```/igm, function(match, text, offset){
-		console.log('>>in step1:' + text)
+		//console.log('>>in step1:' + text)
 		return '```plantuml\n@startuml\n' + text + '@enduml\n```'
 	})
 	
-	console.log('>>type of markdown:' + typeof markdown)
-	console.log('step1:' + markdown)
+	//console.log('>>type of markdown:' + typeof markdown)
+	//console.log('step1:' + markdown)
 	
     markdown = markdown.replace(/```plantuml\s*([\s\S]*?)```/igm, function(match, text, offset){
-		console.log('in step2:' + text)
+		//console.log('in step2:' + text)
         // match "```plantuml" then any whitespace or linebreak
         // then any characters (including line breaks) and mark it as capture group (parenthesis) -> ([\s\S]*?)
         // then "```"
@@ -43,7 +43,7 @@ var resolvePlantuml = (markdown) =>
         // return an img tag as replacement for the plantuml-script
         return '<img src="'+server + encoder.encode(text)+'"/>';
     })
-	console.log('step2:' + markdown)
+	//console.log('step2:' + markdown)
 	return markdown
 }
 
