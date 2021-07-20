@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "md5": "2.2.1",
+    "request": "2.88.0",
+    "reveal-md": "3.0.4"
+  },
+  "scripts": {
+    "start": "reveal-md slides.md --preprocessor preproc.js --disable-auto-open --port 80"
+  }
+}
