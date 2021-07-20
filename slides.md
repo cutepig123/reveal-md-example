@@ -5,6 +5,6 @@
 Bob -> Alice : hello
 @enduml
 ```
-----
+---
 
 ## Second page

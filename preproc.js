@@ -25,22 +25,11 @@ var resolvePlantuml = (markdown) =>
         // then "```"
         // -> the found capturegroup is available in the variable "text". It is the plantuml script.
     
-        // using md5 hash of the text as filename
-        var fileName = "picture" + md5(text) + ".png"
-        var fileNameAbsolute = plantumlDir + '\\' + fileName;
-        
-        console.log(text);
-        
-        // create rendered PNG if not already exists
-        if (!fs.existsSync(fileNameAbsolute)) {
-            console.log("Save as: " + fileNameAbsolute);
-            createPNG(text, fileNameAbsolute);
-        } else {
-            console.log("File already exists: " + fileNameAbsolute);
-        }
 
+		let encoder = require('plantuml-encoder');
+		var server = '//www.plantuml.com/plantuml/svg/';
         // return an img tag as replacement for the plantuml-script
-        return '<img src="plantumlGenerated/'+fileName+'"/>';
+        return '<img src="'+server + encoder.encode(text)+'"/>';
     })
 
 
