@@ -1,3 +1,5 @@
 set me=%~dp0%
-node "%me%\node_modules\reveal-md\bin\reveal-md.js"  %1 --preprocessor preproc.js -w
+rem set THEME=--theme white
+node "%me%\node_modules\reveal-md\bin\reveal-md.js"  %1 --preprocessor preproc.js -w %THEME%
+
 pause
