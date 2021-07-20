@@ -5,6 +5,6 @@
     "reveal-md": "3.0.4"
   },
   "scripts": {
-    "start": "reveal-md slides.md --preprocessor preproc.js --disable-auto-open --port 80"
+    "start": "node \"%dp0%\node_modules\reveal-md\bin\reveal-md.js\" slides.md --preprocessor preproc.js --disable-auto-open --port 80"
   }
 }

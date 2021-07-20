@@ -27,7 +27,7 @@ var resolvePlantuml = (markdown) =>
     
         // using md5 hash of the text as filename
         var fileName = "picture" + md5(text) + ".png"
-        var fileNameAbsolute = plantumlDir + fileName;
+        var fileNameAbsolute = plantumlDir + '\\' + fileName;
         
         console.log(text);
         
