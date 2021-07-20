@@ -1,23 +1,3 @@
-var request = require('request');
-var fs = require('fs')
-var md5 = require('md5');
-
-// specify target dir for rendered diagrams
-var plantumlDir = "plantumlGenerated";
-if (!fs.existsSync(plantumlDir)){
-    fs.mkdirSync(plantumlDir);
-}
-
-var createPNG = (plantumlScript, fileNameAbsolute) => {
-    request.post({
-        // set you plantuml server here
-        url:  'http://plantuml:8080/png',
-        body: plantumlScript
-      })
-      .pipe(fs.createWriteStream(fileNameAbsolute));
-}
-
-
 var resolvePlantuml = (markdown) => 
 {
 	//console.log('>>type of markdown:' + typeof markdown)
