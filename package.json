@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "md5": "2.2.1",
+    "plantuml-encoder": "1.4.0",
+    "request": "2.88.0",
+    "reveal-md": "3.0.4"
+  },
+  "scripts": {
+    "start": "node \"%dp0%\node_modules\reveal-md\bin\reveal-md.js\" slides.md --preprocessor preproc.js --disable-auto-open --port 80"
+  }
+}
