@@ -9,8 +9,6 @@ npm install
 
 
 
-note: test note
-
 ---
 
 
